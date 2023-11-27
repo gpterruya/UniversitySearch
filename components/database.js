@@ -15,7 +15,7 @@ export const buscarFavoritos = async () => {
   }
 };
 
-export const adicionarFavorito = async (universidade) => {
+export const adicionarFavoritoNoBanco = async (universidade) => {
   try {
     const favoritos = await buscarFavoritos();
     const novaLista = [...favoritos, universidade];

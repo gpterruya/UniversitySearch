@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, FlatList, TouchableOpacity, Alert, Text, StyleSheet } from 'react-native';
 import { buscarUniversidades } from './api';
+import { adicionarFavoritoNoBanco } from './database';
 
 const PesquisaUniversidades = ({ navigation }) => {
   const [pais, setPais] = useState('');
@@ -20,6 +21,7 @@ const PesquisaUniversidades = ({ navigation }) => {
   }
 
   const adicionarFavorito = (universidade) => {
+    adicionarFavoritoNoBanco(universidade)
   };
 
   return (
